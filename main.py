@@ -190,7 +190,7 @@ if st.session_state.question_index < len(quiz_questions):
             st.error(f"Incorrect! The correct answer was: {question['answer']}")
         time.sleep(1.5)
         st.session_state.question_index += 1
-        st.experimental_rerun()
+        st.rerun()
 
 # Quiz completed
 else:
@@ -204,4 +204,4 @@ else:
         st.session_state.score = 0
         st.session_state.question_index = 0
         st.session_state.quiz_started = False
-        st.experimental_rerun()
+        st.rerun()
